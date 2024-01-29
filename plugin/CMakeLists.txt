@@ -3,6 +3,16 @@ cmake_minimum_required(VERSION 3.15)
 project(PITCH_SHIFT_PLUGIN VERSION 0.0.1)
 
 juce_add_plugin(PitchShift
+        COMPANY_NAME "noizplay"
+        COMPANY_WEBSITE "noizplay.com"
+        IS_SYNTH FALSE
+        NEEDS_MIDI_INPUT FALSE
+        NEEDS_MIDI_OUTPUT FALSE
+        IS_MIDI_EFFECT FALSE
+        # EDITOR_WANTS_KEYBOARD_FOCUS TRUE/FALSE
+        COPY_PLUGIN_AFTER_BUILD TRUE
+        PLUGIN_MANUFACTURER_CODE Noiz
+
     # VERSION ...                               # Set this if the plugin version is different to the project version
     # ICON_BIG ...                              # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
     # ICON_SMALL ...
@@ -13,8 +23,8 @@ juce_add_plugin(PitchShift
     # IS_MIDI_EFFECT TRUE/FALSE                 # Is this plugin a MIDI effect?
     # EDITOR_WANTS_KEYBOARD_FOCUS TRUE/FALSE    # Does the editor need keyboard focus?
     # COPY_PLUGIN_AFTER_BUILD TRUE/FALSE        # Should the plugin be installed to a default location after building?
-    PLUGIN_MANUFACTURER_CODE Juce               # A four-character manufacturer id with at least one upper-case character
-    PLUGIN_CODE Dem0                            # A unique four-character plugin id with exactly one upper-case character
+    # PLUGIN_MANUFACTURER_CODE Juce               # A four-character manufacturer id with at least one upper-case character
+    PLUGIN_CODE Nrb0                            # A unique four-character plugin id with exactly one upper-case character
                                                 # GarageBand 10.3 requires the first letter to be upper-case, and the remaining letters to be lower-case
     FORMATS AU VST3                             # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
     PRODUCT_NAME "Rubberband Pitch Shift")      # The name of the final executable, which can differ from the target name
